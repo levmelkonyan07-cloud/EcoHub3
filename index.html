@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NomadEcoHub | Global Remote Living</title>
+
+    <meta name="description" content="Discover sustainable workspaces and eco-villages around the world.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Nomad<span>Eco</span>Hub</span>
+        </div>
+
+        <div class="loader-spinner"></div>
+        <p>Discovering new places...</p>
+    </div>
+
+
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Done!</span>
+    </div>
+
+
+
+    <header class="header" id="header">
+
+        <div class="nav-container">
+
+            <a href="#hero" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </span>
+
+                <span>
+                    Nomad<span class="highlight">Eco</span>Hub
+                </span>
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#hero" class="nav-link active">Home</a>
+
+                <a href="#directory" class="nav-link">Directory</a>
+
+                <a href="#features" class="nav-link">Why Us</a>
+
+                <a href="#community" class="nav-link">Community</a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="themeToggle" title="Change theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="icon-btn favorite-nav" id="favoritesButton">
+                    <i class="fa-solid fa-heart"></i>
+                    <span id="favoriteCount">0</span>
+                </button>
+
+                <a href="#directory" class="btn btn-primary desktop-explore">
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <i class="fa-solid fa-seedling"></i>
+                        The future of remote living
+                    </div>
+
+
+                    <h1>
+                        Work anywhere.
+                        <br>
+
+                        <span class="gradient-text">Live differently.</span>
+                    </h1>
+
+
+                    <p class="hero-description">
+                        Discover inspiring eco-villages, remote workspaces,
+                        sustainable communities and unforgettable places
+                        built for the modern digital nomad.
+                    </p>
+
+
+                    <div class="hero-search">
+
+                        <div class="hero-search-item">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <div>
+                                <label>Search</label>
+
+                                <input type="text" id="searchInput" placeholder="City, country or destination...">
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-search-item">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <div>
+                                <label>Category</label>
+
+                                <select id="categoryFilter">
+                                    <option value="all">All categories</option>
+                                    <option value="workspace">Workspaces</option>
+                                    <option value="ecovillage">Eco-villages</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-trust">
+
+                        <div class="avatar-stack">
+
+                            <div class="avatar">A</div>
+                            <div class="avatar">M</div>
+                            <div class="avatar">L</div>
+                            <div class="avatar">S</div>
+
+                            <span class="avatar-more">+</span>
+
+                        </div>
+
+                        <div>
+                            <strong>25,000+</strong>
+                            <span>nomads exploring</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-main-image">
+
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+                            alt="Nature destination">
+
+                        <div class="image-overlay"></div>
+
+                        <div class="hero-image-label">
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Bali, Indonesia
+                            </span>
+
+                            <strong>98% match</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card wifi-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+
+                        <div>
+                            <strong>250 Mbps</strong>
+                            <span>Verified connection</span>
+                        </div>
+
+                        <i class="fa-solid fa-circle-check verified"></i>
+
+                    </div>
+
+
+                    <div class="floating-card eco-card">
+
+                        <div class="floating-icon green">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                        <div>
+                            <strong>100% Green</strong>
+                            <span>Renewable energy</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="stats-section">
+
+            <div class="stats-container">
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            <span class="counter" data-target="140">0</span>+
+                        </h3>
+
+                        <p>Destinations</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            <span class="counter" data-target="25000">0</span>+
+                        </h3>
+
+                        <p>Active Nomads</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            <span class="counter" data-target="99">0</span>%
+                        </h3>
+
+                        <p>Green Energy</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div>
+                        <h3>
+                            <span class="counter" data-target="48">0</span>
+                        </h3>
+
+                        <p>Countries</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="directory-section" id="directory">
+
+            <div class="section-container">
+
+                <div class="section-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            <i class="fa-solid fa-compass"></i>
+                            EXPLORE
+                        </span>
+
+                        <h2>
+                            Find your next
+                            <span>basecamp.</span>
+                        </h2>
+
+                        <p>
+                            Hand-picked destinations combining reliable internet,
+                            beautiful surroundings and sustainable living.
+                        </p>
+
+                    </div>
+
+
+                    <div class="view-buttons">
+
+                        <button class="view-btn active" id="gridView">
+                            <i class="fa-solid fa-grip"></i>
+                        </button>
+
+                        <button class="view-btn" id="listView">
+                            <i class="fa-solid fa-list"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="directory-toolbar">
+
+                    <div class="filter-tabs">
+
+                        <button class="filter-tab active" data-filter="all">
+                            All
+                        </button>
+
+                        <button class="filter-tab" data-filter="workspace">
+                            <i class="fa-solid fa-laptop"></i>
+                            Workspaces
+                        </button>
+
+                        <button class="filter-tab" data-filter="ecovillage">
+                            <i class="fa-solid fa-seedling"></i>
+                            Eco-villages
+                        </button>
+
+                        <button class="filter-tab" data-filter="favorites">
+                            <i class="fa-solid fa-heart"></i>
+                            Favorites
+                        </button>
+
+                    </div>
+
+
+                    <div class="sort-box">
+
+                        <label>Sort:</label>
+
+                        <select id="sortSelect">
+
+                            <option value="featured">
+                                Featured
+                            </option>
+
+                            <option value="rating">
+                                Highest rated
+                            </option>
+
+                            <option value="price-low">
+                                Price: low to high
+                            </option>
+
+                            <option value="price-high">
+                                Price: high to low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="results-info">
+
+                    <span>
+                        Showing
+                        <strong id="resultsCount">0</strong>
+                        destinations
+                    </span>
+
+                    <button id="clearFilters" class="clear-filters">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Clear filters
+                    </button>
+
+                </div>
+
+
+
+                <div class="cards-grid" id="cardsContainer"></div>
+
+
+
+                <div class="empty-state" id="emptyState">
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+
+                    <h3>No destinations found</h3>
+
+                    <p>
+                        Try another country, city or category.
+                    </p>
+
+                    <button class="btn btn-primary" id="emptyReset">
+                        Reset filters
+                    </button>
+
+                </div>
+
+
+                <div class="pagination" id="pagination"></div>
+
+            </div>
+
+        </section>
+
+
+        <section class="features-section" id="features">
+
+            <div class="section-container">
+
+                <div class="features-heading">
+
+                    <span class="section-label">
+                        <i class="fa-solid fa-sparkles"></i>
+                        WHY NOMADECO
+                    </span>
+
+                    <h2>
+                        More than a place
+                        <span>to work.</span>
+                    </h2>
+
+                    <p>
+                        We focus on the details that actually matter
+                        when you're living and working remotely.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">01</div>
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+
+                        <h3>Verified Internet</h3>
+
+                        <p>
+                            We prioritize destinations with reliable,
+                            fast internet and backup connectivity.
+                        </p>
+
+                        <a href="#directory">
+                            Explore connectivity
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">02</div>
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+
+                        <h3>Real Sustainability</h3>
+
+                        <p>
+                            Solar power, permaculture, recycling and
+                            responsible water management.
+                        </p>
+
+                        <a href="#directory">
+                            Discover green places
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">03</div>
+
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+
+                        <h3>Real Community</h3>
+
+                        <p>
+                            Meet developers, designers, founders,
+                            creators and fellow travelers.
+                        </p>
+
+                        <a href="#community">
+                            Join community
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="community-section" id="community">
+
+            <div class="community-container">
+
+                <div class="community-image">
+
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85"
+                        alt="Nomad community">
+
+                </div>
+
+
+                <div class="community-content">
+
+                    <span class="section-label">
+                        <i class="fa-solid fa-users"></i>
+                        COMMUNITY
+                    </span>
+
+                    <h2>
+                        You're not
+                        <span>traveling alone.</span>
+                    </h2>
+
+                    <p>
+                        NomadEcoHub is built around people.
+                        Discover communities where you can work,
+                        learn, collaborate and build friendships.
+                    </p>
+
+
+                    <div class="community-points">
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Weekly community events
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Coworking meetups
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            Local experiences
+                        </div>
+
+                    </div>
+
+
+                    <button class="btn btn-primary" id="communityBtn">
+                        Join the community
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="newsletter-section">
+
+            <div class="newsletter-container">
+
+                <div>
+
+                    <span class="newsletter-icon">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </span>
+
+                    <h2>
+                        Your next destination
+                        <br>
+                        might be one email away.
+                    </h2>
+
+                    <p>
+                        Get our best eco-workspaces and remote living
+                        destinations every week.
+                    </p>
+
+                </div>
+
+
+                <form class="newsletter-form" id="newsletterForm">
+
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+
+                    <button class="btn btn-primary" type="submit">
+                        Subscribe
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <small>
+                        No spam. Unsubscribe anytime.
+                    </small>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <div class="modal-overlay" id="spaceModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="closeModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal-overlay" id="bookingModal">
+
+        <div class="booking-modal">
+
+            <button class="modal-close" id="closeBooking">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="booking-header">
+
+                <span class="section-label">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    REQUEST A STAY
+                </span>
+
+                <h2>Plan your visit</h2>
+
+                <p id="bookingPlace">
+                    Destination
+                </p>
+
+            </div>
+
+
+            <form id="bookingForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>First name</label>
+
+                        <input type="text" id="firstName" placeholder="Your first name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Last name</label>
+
+                        <input type="text" id="lastName" placeholder="Your last name" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email address</label>
+
+                    <input type="email" id="bookingEmail" placeholder="you@example.com" required>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Check-in</label>
+
+                        <input type="date" id="checkIn" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Check-out</label>
+
+                        <input type="date" id="checkOut" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Number of guests</label>
+
+                    <select id="guests">
+
+                        <option value="1">1 guest</option>
+                        <option value="2">2 guests</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5+ guests</option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="btn btn-primary booking-submit" type="submit">
+
+                    Send request
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#hero" class="logo">
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </span>
+
+                    <span>
+                        Nomad<span class="highlight">Eco</span>Hub
+                    </span>
+
+                </a>
+
+                <p>
+                    Helping remote workers discover meaningful,
+                    sustainable places around the world.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Explore</h4>
+
+                <a href="#directory">Directory</a>
+                <a href="#features">Why us</a>
+                <a href="#community">Community</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Categories</h4>
+
+                <a href="#directory">Workspaces</a>
+                <a href="#directory">Eco-villages</a>
+                <a href="#directory">Popular destinations</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>Company</h4>
+
+                <a href="#">About us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 NomadEcoHub. Built for a greener way of living.
+            </p>
+
+            <span>
+                Made with <i class="fa-solid fa-heart"></i> for nomads
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <button class="back-top" id="backTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
